@@ -85,7 +85,7 @@ with col1:
     st.subheader("Trip Details")
     origin = st.text_input("Origin City", value="New York")
     destination = st.text_input("Destination City", value="Paris")
-    start_date = st.date_input("Start Date", value=datetime.now() + timedelta(days=7), min_value=datetime.now())
+    start_date = st.date_input("Start Date", value=datetime.now() + timedelta(days=15), min_value=datetime.now())
     end_date = st.date_input("End Date", value=datetime.now() + timedelta(days=12), min_value=start_date)
     st.info(f"Trip Duration: {(end_date - start_date).days + 1} days")
 
@@ -148,5 +148,6 @@ if st.session_state.trip_plan:
 
 st.markdown("---")
 st.markdown("<div style='text-align:center;color:gray'>Built with Streamlit & CrewAI | Powered by OpenAI</div>", unsafe_allow_html=True)
+
 
 
